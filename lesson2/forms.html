@@ -99,7 +99,79 @@
 
     </fieldset>
 
+    <fieldset>
+        <legend>Выбор даты и времени</legend>
 
+        <label for="time">Выбор времени</label>
+        <input id="time" type="time" min="14:16">
+
+        <br>
+        <label for="date">Выбор даты</label>
+        <input id="date" type="date" min="2008-12-12">
+
+        <br>
+        <label for="datetime">Выбор даты и времени</label>
+        <input id="datetime" type="datetime-local">
+
+        <br>
+        <label>Указание месяца <input type="month"></label>
+        <label>Указание недели <input type="week"></label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Кнопки (тег input)</legend>
+
+        <input type="submit" value="Отправить данные формы">
+
+        <input type="reset" value="Очистить поля формы">
+
+        <input type="button" value="Просто кнопка">
+
+        <input type="image" src="path_to_img" alt="Кнопка-картинка">
+    </fieldset>
+
+    <fieldset>
+        <legend>Кнопки (тег button)</legend>
+
+        <button type="submit">Отправить данные формы</button>
+
+        <button type="reset">Очистить форму</button>
+
+        <button type="button">Просто кнопка</button>
+    </fieldset>
+
+    <fieldset>
+        <legend>Многострочное текстовое поле</legend>
+        <textarea cols="40" rows="10"
+                autofocus required placeholder="Подсказка">
+        </textarea>
+    </fieldset>
+
+    <fieldset>
+        <legend>Раскрывающиеся списки</legend>
+
+        <select name="select" size="2" required>
+            <option value="1">Элемент списка 1</option>
+            <option value="2" selected>Элемент списка 2</option>
+            <option value="3" disabled>Элемент списка 3</option>
+        </select>
+
+        <br>
+        <select name="select2" multiple>
+            <!--multiple для множественного выбора-->
+            <optgroup disabled label="Заголовок для группы элементов 1">
+                <option value="1">Вариант 1</option>
+                <option value="2">Вариант 2</option>
+                <option value="3">Вариант 3</option>
+            </optgroup>
+            <optgroup label="Заголовок для группы элеменов 2">
+                <option value="4">Вариант 1</option>
+                <option value="5">Вариант 2</option>
+                <option value="6">Вариант 3</option>
+            </optgroup>
+        </select>
+    </fieldset>
 
 
 
