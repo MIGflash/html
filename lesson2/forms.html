@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Теги форм</title>
+</head>
+<body>
+
+<!--контейнер для полей формы-->
+<form action="#" method="post"
+    enctype="multipart/form-data"> <!--для отправки файлов на сервер-->
+    <!--action - обработчик данных формы-->
+    <!--method - метод передачи данных формы-->
+    <fieldset> <!-- группировка полей формы -->
+        <legend>Тексторые поля</legend>
+
+        <!--однострочное текстовое поле-->
+        <label for="text">Введите имя</label>
+        <input readonly id="text" type="text" value="some text">
+        <input disabled type="text" placeholder="введите имя">
+        <!--readonly - текстовое поле не может быть изменено пользователем-->
+        <!--disabled - поле заблокировано-->
+
+        <br>
+        <!--валидация почтового адреса-->
+        <label>Введите e-mail</label>
+        <input required autofocus type="email">
+        <!--autofocus - фокус на элементе формы-->
+        <!--required - поле обязательно для заполнения-->
+
+
+        <br>
+        <!--для ввода паролей-->
+        <label for="pwd">Введите пароль</label>
+        <input minlength="3" maxlength="9" id="pwd" type="password">
+        <!--minlength/maxlength - минимальное/максимальное количество символов -->
+
+        <br>
+        <!--текстовое поле для поиска-->
+        <input type="search">
+
+        <!--текстовое поля для валидеции url-->
+        <input type="url">
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Загрузка файлов</legend>
+
+        <input type="file" multiple accept="image/*">
+        <!--multiple - для загрузки нескольких файлов-->
+        <!--accept - указание типа загружаемого файла-->
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Поля для ввода чисел</legend>
+
+        <input type="number" min="2" max="12" step="2">
+        <input type="range" min="2" max="12">
+    </fieldset>
+
+    <fieldset>
+        <legend>Чекбоксы и радиокнопки</legend>
+
+        <label><input checked type="checkbox">Чекбокс</label>
+
+        <br>
+        <label><input type="radio">Радиокнопка</label>
+
+    </fieldset>
+
+
+    <fieldset>
+        <legend>Группы радиокнопок</legend>
+
+        <label><input name="answer" type="radio">Да</label>
+        <label><input name="answer" type="radio">Нет</label>
+        <label><input name="answer" type="radio">Не знаю</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Группы чекбоксов</legend>
+
+        <label><input name="answer2[]" type="checkbox">Вариант 1</label>
+        <label><input name="answer2[]" type="checkbox">Вариант 2</label>
+        <label><input name="answer2[]" type="checkbox">Вариант 3</label>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Взятие цвета / Скрытое поле</legend>
+
+        <input type="color">
+
+        <br>
+        <input type="hidden" value="info">
+
+    </fieldset>
+
+
+
+
+
+</form>
+
+</body>
+</html>
