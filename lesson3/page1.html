@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Подключение стилей / CSS селекторы</title>
+    <style>
+        h2 {
+            color: blue;
+        }
+    </style>
+    <!--подключение файла со стилями-->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <h1 style="color: red">
+        Встраивание -
+        подключение стилей через атрибут style
+    </h1>
+
+    <h2>
+        Вложение -
+        подключение стилей через тег style в теге head
+    </h2>
+
+    <h3 class="text-center">
+        Связывание - подключение файлов со стилями через тег link
+        в теге head
+    </h3>
+
+    <div id="container"></div>
+
+    <p class="text-center">
+        Lorem ipsum dolor sit amet.
+    </p> <!-- lorem5 -->
+
+    <p>Lorem <span>ipsum dolor</span> sit amet.</p>
+
+    <div>
+        <p>Lorem <span>ipsum dolor</span> sit amet.</p>
+    </div>
+
+    <div>
+        <p class="green">
+            Lorem
+            <a href="#">ipsum dolor</a>
+            sit amet.
+        </p>
+    </div>
+
+    <p class="brown">
+        Lorem
+        <a href="#">ipsum dolor</a>
+        sit amet.
+    </p>
+
+
+    <div class="inherit-example">
+        Lorem ipsum dolor sit amet.
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <h5 class="some-class" id="some_id">
+        Специфичность
+    </h5>
+</body>
+</html>
