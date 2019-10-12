@@ -8,6 +8,7 @@ header {
     /*bottom: ;*/
     height: 60px;
     background: orangered;
+    z-index: 1;
 }
 
 body {
@@ -31,3 +32,33 @@ h1 {
     left: 100px;
 }
 
+.image {
+    position: relative;
+}
+
+.image h2 {
+    position: absolute;
+    top: 50px;
+    left: 30px;
+}
+
+.image p {
+    /*абсолютное позиционирование*/
+    position: absolute;
+    top: 80px;
+    left: 30px;
+}
+/*для адаптивных изображений*/
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
