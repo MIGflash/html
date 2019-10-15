@@ -1,0 +1,78 @@
+div {
+    border: 1px solid black;
+}
+
+.none {
+    display: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+/*псевдоэлементы*/
+#parent :first-child{ /*первый дочерний элемент*/
+    background: orange;
+}
+
+#parent :last-child {
+    background: green;
+}
+
+#parent :nth-child(3){
+    background: blue;
+}
+
+/*четные (even) и нечетные (odd)*/
+#parent :nth-child(odd) { /*even*/
+    border-bottom: 3px solid red;
+}
+
+#target {
+    width: 300px;
+    height: 100px;
+    background: red;
+    opacity: 0.7;
+}
+
+#target:target {
+    opacity: 1;
+    background: blue;
+}
+
+ul {
+    list-style-type: none;
+}
+
+li::before {
+    content: "\2740";
+    color: orangered;
+}
+
+.image::before {
+    content: "";
+    height: 50px;
+    width: 50px;
+    /*margin: 3px;*/
+    display: inline-block;
+    background-image: url("../img/Desert.jpg");
+    background-size: cover;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+
+/*::after*/
+
+/*форматирование кавычек*/
+
+p {
+    quotes: '<' '>';
+}
+
+p::before {
+    content: open-quote;
+}
+
+p::after {
+    content: close-quote;
+}
