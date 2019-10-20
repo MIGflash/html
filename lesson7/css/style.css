@@ -1,9 +1,13 @@
+@import "flex.css";
 body {
     margin: 0;
+    font-family: 'Open Sans', Arial, serif;
+    font-size: 16px;
+    color: #333333;
 }
 
 .container {
-    max-width: 960px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -16,46 +20,55 @@ p {
     word-break: break-all;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
 header .contacts{
-    display: flex;
+    background: #f4f4f4;
+}
+
+header .container{
     justify-content: space-around;
     align-items: center;
-    padding: 15px;
-    background: lightgray;
+    padding: .6em;
 }
 
 header .contacts a {
-    padding: 6px 20px;
-    background: orangered;
+    padding: 10px 35px;
     text-decoration: none;
+    border: 1px solid #d4d4d4;
+    color: #333333;
+}
+header .contacts .phone {
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.flex {
-    display: flex;
+header .contacts .phone span {
+    padding-left: .8em;
+    font-weight: normal;
+    letter-spacing: 0;
 }
 
-.flex-1 {
-    flex: 2;
-}
-
-.flex-6 {
-    flex: 6;
-}
-
-ul {
-    width: 100%;
+header nav {
     justify-content: space-around;
-    align-items: center;
 }
 
-nav {
-    justify-content: space-between;
+header nav a {
+    color: #333333;
+    text-decoration: none;
+    font-size: 1.5em;
 }
 
-.img {
-    height: 200px;
-    width: 30px;
+header nav a:hover {
+    color: black;
 }
+
 
 #slider li {
     display: none;
@@ -68,46 +81,173 @@ nav {
 
 #slider ul {
     padding: 0;
+    margin: 0;
 }
 
 #slider p {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: .4em;
+    left: .6em;
     margin: 0;
 }
 
 #slider li img {
-    height: 40vh;
+    height: 50vh;
+}
+
+#slider p {
+    font-size: 5em;
 }
 
 .border {
-    text-align: center;
-    border-bottom: 3px solid black;
-    margin: 0 80px;
+    border-bottom: 2px solid #d4d4d4;
+    margin: 3em auto;
+    padding: 0 0.7em;
 }
 
 .border p {
     margin: 0;
 }
 /*16px 1em*/
-.border .size-1 {
+.border :nth-child(1) {
     font-weight: bold;
-    font-size: 2em;
-    margin-bottom: 0.5em;
+    font-size: 2.3em;
 }
 
-.size-2 {
-    font-size: 1.5em;
+.border :nth-child(2) {
+    font-size: 1.9em;
     margin-bottom: 1em;
 }
 
-.size-3 {
-    font-size: 1em;
-    padding-bottom: 30px;
+.border :nth-child(3) {
+    font-size: 1.5em;
+    padding-bottom: 2em;
 }
 
-.horizontal-nav nav {
-    background: blue;
+.info {
+    padding: 0 0.7em;
 }
 
+.info p{
+    font-size: 1.9em;
+}
+
+
+.info-items p {
+    margin: 0 0 .5em;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.info-items ul {
+    margin: 0;
+}
+
+.info-items li {
+    font-size: 1.2em;
+}
+
+main.container {
+    margin-bottom: 3em;
+}
+
+.examples {
+    background: #f4f4f4;
+    padding: 2em;
+}
+
+.examples .container > p{
+    font-size: 1.9em;
+}
+
+.examples-item {
+    position: relative;
+    margin: 0 .7em;
+
+}
+
+.examples-item p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    transition: background-color .8s;
+    margin: 0;
+    color: #f4f4f4;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.examples-item img {
+    height: 100%;
+}
+
+
+.examples-item p:hover {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+
+.download {
+    background: #704848;
+    padding: 2em;
+    color: #f4f4f4;
+}
+
+.download .container{
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.download span:first-child {
+    font-size: 1.9em;
+}
+.download span:last-child {
+    font-size: 1.4em;
+}
+
+.download a {
+    padding: 1em 0;
+    text-decoration: none;
+    background: #654141;
+    border: 1px solid #f4f4f4;
+    color: #f4f4f4;
+}
+
+.catalog {
+    margin: 3em auto;
+}
+
+.catalog .container {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.catalog-item {
+    width: 30%;
+    background: #f4f4f4;
+    margin: 1em 0;
+}
+
+.catalog-item p {
+    margin: 0;
+    padding: 1.7em;
+}
+
+.catalog-item a {
+    background: #654141;
+    text-decoration: none;
+    color: #f4f4f4;
+    display: block;
+    padding: .4em 0;
+}
+
+footer {
+    padding: 70px 0;
+    background: #f4f4f4;
+}
